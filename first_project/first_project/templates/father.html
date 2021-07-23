@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} {%endblock%}
+    </title>
+    <style>
+        h1{
+            background-color: darkolivegreen;
+            text-align: center;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Duvan Felipe Barbosa Barbosa esta estudiando bien melito</h1>
+    {% include "superior/barra_navegacion.html" %}
+    <p style="text-align: right;">Por favor evitar molestarlo, gracias perros</p>
+
+
+    {% block content %} 
+    
+    {% endblock %}
+
+    <p>Goku</p>
+</body>
+</html>

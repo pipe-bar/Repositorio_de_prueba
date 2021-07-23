@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Plantilla</title>
+</head>
+
+<body>
+
+    {% include "superior/barra_navegacion.html" %}
+
+    <h2>
+        Mi nombre es {{nombre_persona}} y mis apellidos son {{apellido_persona}}
+
+
+        <h3>estamos viendo el tema de plantillas en el dia: {{ahora.day}} / {{ahora.month}} / {{ahora.year}}
+        </h3>
+    </h2>
+    <h2>
+        <strong>Listado de personas sexys</strong>
+
+    </h2>
+    <p>
+    <table >
+        <thead >
+            <tr>Nombres</tr>
+        </thead>
+        {% if listado %}
+
+            {%for el_tema in listado %}
+            <tbody>
+                <td>
+                    
+                        {{el_tema}}
+
+                    
+                </td>
+            </tbody>
+            {%endfor%}
+
+        {% else %}
+            <h2>No hay elementos que mostrar</h2>
+        {% endif %}
+
+    </table>
+
+    </p>
+        {# ESTO NO SE DEBERIA MOSTRAR #}
+        {%comment%}
+        {%endcomment%}
+
+        <h2>
+        {% if nombre_persona == 'Duvan Felipe Barbosa' %}
+
+            <strong>Eres el actual poseedor del computador {{ nombre_persona.upper }}</strong>
+
+        {%else%}
+
+            <strong>Creo que tenemos un intruso</strong>
+
+        {%endif%}
+    </h2>
+
+
+</body>
+
+</html>
